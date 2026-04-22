@@ -270,10 +270,73 @@ video {
   text-align: center;
 }
 
+.closing-meta {
+  margin: 10px 0 0;
+}
+
+.inline-link {
+  color: var(--gold-strong);
+  text-decoration: none;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  text-decoration: underline;
+}
+
 .closing-mark {
   max-width: 320px;
   margin: 0 auto 22px;
   padding: 16px;
+}
+
+.legal-shell {
+  width: min(840px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.legal-card {
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(24, 25, 29, 0.92), rgba(11, 12, 14, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.legal-card h1,
+.legal-card h2 {
+  margin: 0;
+  font-family: "Futura Condensed Extra Bold", "Futura-CondensedExtraBold", Futura, sans-serif;
+  line-height: 0.95;
+}
+
+.legal-card h1 {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  margin-bottom: 10px;
+}
+
+.legal-card h2 {
+  margin-top: 26px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--gold-strong);
+}
+
+.legal-meta,
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-meta {
+  margin: 0 0 22px;
+  font-size: 0.95rem;
+}
+
+.legal-card ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
 @media (max-width: 960px) {
@@ -292,6 +355,10 @@ video {
 @media (max-width: 640px) {
   .page-shell {
     width: min(100% - 20px, 1200px);
+  }
+
+  .legal-shell {
+    width: min(100% - 20px, 840px);
   }
 
   .topbar {
