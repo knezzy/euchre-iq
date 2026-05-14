@@ -228,10 +228,8 @@ a {
 .hero-stats a:focus-visible,
 .feature-card:hover,
 .feature-card:focus-visible,
-.screenshot-pair:hover,
-.screenshot-pair:focus-visible,
-.screenshot-card:hover,
-.screenshot-card:focus-visible,
+.analysis-shot-link:hover,
+.analysis-shot-link:focus-visible,
 .mode-panel:hover,
 .mode-panel:focus-visible,
 .faq-card:hover,
@@ -352,11 +350,10 @@ a {
   max-width: 58ch;
 }
 
-.screenshot-pair {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  align-items: center;
+.analysis-shot-link {
+  display: block;
+  max-width: 430px;
+  justify-self: center;
   border: 1px solid transparent;
   border-radius: 8px;
   color: inherit;
@@ -364,8 +361,7 @@ a {
   transition: border-color 160ms ease, transform 160ms ease;
 }
 
-.screenshot-pair img,
-.screenshot-card img,
+.analysis-shot-link img,
 .angled-shot,
 .closing-shot {
   width: 100%;
@@ -375,40 +371,12 @@ a {
   box-shadow: var(--shadow);
 }
 
-.screenshot-pair img:first-child {
-  transform: translateY(-18px);
-}
-
-.screenshot-pair img:last-child {
-  transform: translateY(18px);
-}
-
-.screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  align-items: start;
-}
-
-.screenshot-card,
 .angled-shot-link,
 .closing-shot-link {
   display: block;
   color: inherit;
   text-decoration: none;
   transition: border-color 160ms ease, transform 160ms ease;
-}
-
-.screenshot-card.wide {
-  grid-column: span 2;
-}
-
-.screenshot-card span {
-  display: block;
-  margin-top: 10px;
-  color: var(--soft);
-  font-size: 0.92rem;
-  text-align: center;
 }
 
 .modes-section {
@@ -528,9 +496,6 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .screenshot-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 860px) {
@@ -586,8 +551,7 @@ a {
 
   .hero-stats,
   .feature-grid,
-  .faq-grid,
-  .screenshot-pair {
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 
@@ -595,25 +559,6 @@ a {
     width: 100%;
   }
 
-  .screenshot-grid {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    padding-bottom: 12px;
-    scroll-snap-type: x mandatory;
-  }
-
-  .screenshot-card {
-    flex: 0 0 min(78vw, 330px);
-    scroll-snap-align: start;
-  }
-
-  .screenshot-card.wide {
-    flex-basis: min(82vw, 360px);
-  }
-
-  .screenshot-pair img:first-child,
-  .screenshot-pair img:last-child,
   .angled-shot {
     transform: none;
   }
